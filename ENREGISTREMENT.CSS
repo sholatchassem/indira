@@ -1,0 +1,235 @@
+
+.image
+{
+    width: 100%;
+    height: 645PX;
+   /* background-image: url(ENREGISTREMENTIMAGE/ChMkJlfJQVOIMuVVAAiOBr8t3TwAAU7cAEnt_4ACI4e748.jpg);*/
+    background-size: cover;
+    background-position: center;
+   
+}
+
+img {
+    width: 180px;
+    height: 80px;
+    border: 1px solid #ddd;
+    margin: 20px auto;
+}
+*
+{
+    padding:0 ;
+    margin: 0;
+    text-decoration:none ;
+    list-style: none;
+}
+/* BARE DU NAV*/
+/* .contenair */
+/* {    
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    backdrop-filter: blur(1PX);
+    box-shadow: 0 0 19PX white;
+    background-color: rgb(250, 248, 248);
+    height:80PX;
+    
+
+    /* opacity: 0PX;
+   transform: translateY(-30PX);
+    animation: apparition 0,4s 1,6s ease-out forwards ;*/
+} */
+.contenair .logoimage
+{
+    width: 130PX;
+}
+.contenair ul
+{
+    display: flex; 
+}
+.contenair ul li
+{
+    margin: 0 10PX;
+    
+}
+.contenair ul li:hover
+{
+    border: 2PX solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transform: scale(1.1);
+}
+.contenair ul li a
+{
+    color: black;
+}
+.contenair .logo
+{
+    font-size: 39PX;
+    margin: 0 9PX;
+    color: blue;
+    font-weight: bold;
+}
+.contenair ul .ENRE
+{
+    font-weight: 600;
+    border: 2PX solid rgb(68, 0, 255);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.contenair ul .ENRE a
+{
+    color: rgb(234, 0, 255);
+}
+
+
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100VH;
+     
+    background-image: url('entrepot2.webp') ;
+    opacity: 0.85;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.container
+{
+  position: relative;
+  width: 428PX;
+  height: 500PX;
+  background: #dfdee4;
+  overflow: hidden;
+  margin: 6% 35%;
+  border-radius: 10px;
+}
+.container::before
+{
+    content: "";
+    position: absolute;
+    width: 428PX;
+    height: 420PX;
+    background: linear-gradient(0deg, transparent,#0307fe,#fe03f6);
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right ;
+    animation: anime 7s linear infinite;
+}
+.container::after
+{
+    content: "";
+    position: absolute;
+    width: 428PX;
+    height: 420PX;
+    background: linear-gradient(0deg, transparent,#1c03fe,#0703fe);
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right ;
+    animation: anime 7s linear infinite;
+    animation-delay: 3s;
+}
+@keyframes anime{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.form {
+    align-items: center;
+    position: absolute;
+    inset: 3PX;
+    background-color: rgb(188 195 195);
+    border-radius: 8PX;
+    z-index: 10;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+   
+    gap: 20px;
+}
+.label{
+    border-radius: 100px;
+}
+a{
+    text-decoration: none;
+    text-align: left;
+}
+button{
+    
+    background-color: #1c03fe;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    margin-top: 100px;
+    margin-top: -10px; 
+    /* padding: 3px 8px; */
+    font-size: 10px;  
+    width: 100px;   
+
+}
+
+.form H2
+{
+    text-align: center;
+    /* color:; */
+    letter-spacing: 3PX;
+}
+.form .texte a
+{
+    text-align: right;
+    text-decoration: none;
+    
+}
+a{
+    text-decoration: none;
+    text-align: right;
+
+}
+.container .label{
+    border-radius: 100px;
+}
+.form .box
+{
+    position: relative;
+    width: 300PX;
+    /* margin-top: 35PX; */
+}
+.form .box input
+{
+    width: 100%;
+    padding: 20PX 10PX 10PX;
+    border-color:  #Fe03f6;
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 18PX;
+    outline: none;
+    color:  #Fe03f6;
+}
+input[type="submit"]
+{
+    border: 1PX solid #fff;
+    border-radius: 60px;
+    
+}
+.btn-hover {
+    color: blue; 
+    text-decoration: none;
+    text-align: right;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-hover:hover {
+   color: rgb(83, 83, 207); 
+}

@@ -1,0 +1,407 @@
+
+
+:root {
+    --dark-blue: #1a237e;
+    --light-blue: #303f9f;
+    --mouse-gray: #9e9e9e;
+    --light-gray: #f5f5f5;
+    --dark-gray: #616161;
+    --white: #ffffff;
+}
+
+
+
+        /* Style général */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .menu {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            color: #007BFF;
+        }
+
+        /* Style des pages */
+        .page {
+            display: none;
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Classe active pour afficher la page */
+        .page.active {
+            display: block;
+        }
+
+        /* Style pour la page Utilisateur */
+        #utilisateur {
+            background-color: #e0f7fa;
+        }
+
+        /* Style pour la page Inventaire */
+        #inventaire {
+            background-color: #fff3e0;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+        }
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--dark-blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--light-blue);
+}
+
+.sidebar-menu {
+    padding: 20px 0;
+    flex-grow: 1;
+}
+.sidebar-menu > a {
+    text-decoration: none;        /* Supprime la décoration de texte (souligné) */
+    color: white;                 /* Définit la couleur du texte en blanc */
+    display: block;               /* Assure que le lien prend toute la largeur disponible */
+    padding: 10px;                /* Ajoute du padding pour améliorer l'alignement et l'espacement */
+    margin: 5px 0;                /* Ajoute un petit espacement entre les éléments du menu */
+    font-size: 16px;              /* Ajuste la taille de la police pour le texte */
+    border-radius: 4px;           /* Ajoute un léger arrondi aux coins pour les liens */
+}
+
+.sidebar-menu > a:hover {
+    /* background-color: #444;      Change le fond au survol */
+    color: #fff;                  /* Change la couleur du texte en blanc au survol */
+    transition: background-color 0.3s ease;  /* Ajoute une transition fluide lors du survol */
+}
+
+.sidebar-menu > a.active {
+    /* background-color: #333;       Fond différent si le lien est actif */
+    color: #fff;                  /* Garde la couleur du texte blanche */
+}
+
+.menu-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+.menu-item:hover {
+    background-color: var(--light-blue);
+}
+
+.menu-item.active {
+    background-color: var(--light-blue);
+    border-left: 4px solid var(--white);
+}
+
+.submenu {
+    background-color: var(--light-blue);
+    display: none;
+    padding-left: 20px;
+}
+
+.submenu-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submenu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-item.active + .submenu {
+    display: block;
+}
+
+ .main-content {
+    flex-grow: 1;
+    background-color: var(--light-gray);
+    padding: 20px;
+    overflow-y: auto;
+    margin-left: 120px; 
+ }
+
+.dashboard-header {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.dashboard-card {
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.card-content {
+    color: var(--dark-gray);
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+th {
+    background-color: var(--mouse-gray);
+    color: var(--white);
+}
+
+tr:hover {
+    background-color: rgba(0,0,0,0.03);
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--dark-gray);
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--mouse-gray);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button, input[type="submit"] {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: var(--light-blue);
+}
+
+/* Hide all sections initially */
+.content-section {
+    display: none;
+}
+
+/* Show active section */
+.content-section.active {
+    display: block;
+}
+
+/* User info in sidebar footer */
+.sidebar-footer {
+    padding: 15px;
+    border-top: 1px solid var(--light-blue);
+    text-align: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.user-name {
+    font-size: 14px;
+}
+
+/* Messages */
+.message {
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Tabs for entries and exits */
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background-color: var(--light-gray);
+    border: 1px solid var(--mouse-gray);
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border-color: var(--dark-blue);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Stats cards on dashboard */
+.stats-card {
+    flex: 1;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.stats-card.blue {
+    background-color: #e3f2fd;
+}
+
+.stats-card.green {
+    background-color: #e8f5e9;
+}
+
+.stats-card.orange {
+    background-color: #fff3e0;
+}
+
+.stats-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.stats-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Action buttons */
+.btn-edit {
+    background-color: #4caf50;
+    padding: 5px 10px;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    padding: 5px 10px;
+}
+
+
+h2{
+    color: var(--white);
+
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* .sidebar {
+    width: 250px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+} */
+
